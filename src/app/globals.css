@@ -2,7 +2,11 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000;
+  --primary: #2b6cb0;
+  --secondary: #4c51bf;
+  --accent: #38a169;
+  --danger: #e53e3e;
 }
 
 @theme inline {
@@ -14,13 +18,75 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #000000;
+    --primary: #4299e1;
+    --secondary: #667eea;
+    --accent: #48bb78;
+    --danger: #f56565;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+/* Özel Stillemeler */
+.crypto-pattern {
+  background-color: #ffffff;
+  background-image: none;
+}
+
+/* Container genişliğini maksimum yapıp yanları doldurmak için */
+.container {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Form Elementleri */
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 8px;
+  background: #ddd;
+  border-radius: 4px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--primary);
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--primary);
+  cursor: pointer;
+}
+
+/* Form Radio Buttons */
+.form-radio {
+  @apply h-4 w-4 text-blue-600 rounded-full;
+}
+
+/* Header ve Footer düzenlemeleri */
+header, footer {
+  width: 100%;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-bottom: 1px solid #eaeaea;
+}
+
+header a, footer a {
+  color: #000000 !important;
 }

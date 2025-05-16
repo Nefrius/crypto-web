@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kriptoloji Web Sitesi
 
-## Getting Started
+Bu proje, klasik Sezar şifreleme ve modern RSA şifreleme algoritmaları hakkında bilgi veren ve bu şifreleme yöntemlerini interaktif olarak deneyimleyebileceğiniz bir web sitesidir.
 
-First, run the development server:
+## Özellikler
+
+- **Ana Sayfa**: Sezar şifreleme ve RSA şifreleme hakkında genel bilgiler içerir
+- **Sezar Şifreleme Sayfası**: Sezar şifrelemesi ile metin şifreleme ve şifre çözme işlemlerini yapabileceğiniz interaktif bir arayüz sunar
+- **RSA Şifreleme Sayfası**: RSA algoritması ile anahtar çifti oluşturma, metin şifreleme ve şifre çözme işlemlerini yapabileceğiniz bir arayüz sunar
+
+## Kullanılan Teknolojiler
+
+- [Next.js](https://nextjs.org/) - React tabanlı web uygulama framework'ü
+- [TypeScript](https://www.typescriptlang.org/) - JavaScript'in tiplendirilmiş versiyonu
+- [TailwindCSS](https://tailwindcss.com/) - Utility-first CSS framework'ü
+- [React](https://reactjs.org/) - Kullanıcı arayüzü geliştirme kütüphanesi
+
+## Kurulum
+
+Bu projeyi yerel geliştirme ortamınızda çalıştırmak için aşağıdaki adımları izleyin:
 
 ```bash
+# Repoyu klonlayın
+git clone https://github.com/kullanici/kriptoloji-website.git
+
+# Proje dizinine gidin
+cd kriptoloji-website
+
+# Bağımlılıkları yükleyin
+npm install
+
+# Geliştirme sunucusunu başlatın
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Daha sonra, tarayıcınızda [http://localhost:3000](http://localhost:3000) adresini açarak uygulamayı görüntüleyebilirsiniz.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Şifreleme Hakkında
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Sezar Şifreleme
 
-## Learn More
+Sezar şifrelemesi, M.Ö. 100'lü yıllarda Julius Caesar tarafından kullanılan en eski şifreleme tekniklerinden biridir. Bu yöntemde, alfabedeki her harf belirli bir kaydırma miktarı (shift) kadar ileriye kaydırılarak şifrelenir.
 
-To learn more about Next.js, take a look at the following resources:
+### RSA Şifreleme
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+RSA (Rivest-Shamir-Adleman), 1977 yılında icat edilen ve günümüzde internet güvenliğinde yaygın olarak kullanılan asimetrik bir şifreleme algoritmasıdır. İki anahtar kullanır: şifreleme için açık anahtar (public key) ve şifre çözme için özel anahtar (private key).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Lisans
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Bu proje MIT lisansı altında lisanslanmıştır - detaylar için [LICENSE](LICENSE) dosyasına bakın.
